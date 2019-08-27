@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+<title>
+	Song / 后阁楼
+</title>
+    <style type="text/css">
+        body
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        .bg_player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
+}
+        .bg_content
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        #lrc_content {
+    width: 400px;
+    padding: 20px 30px;
+    background-color: White;
+    margin: 72px auto;
+    line-height: 1.8em;
+}
+#song {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+    </style>
+    <script src="js/jquery-1.7.2.min.js-v=10.js" tppabs="http://www.hougelou.com/js/jquery-1.7.2.min.js?v=10" type="text/javascript"></script>
+    <script type="text/javascript" src="js/Tool/jquery.jplayer.min.js" tppabs="http://www.hougelou.com/js/Tool/jquery.jplayer.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".bg_player").attr("style", "background-image:url('" + $(".bg_player").attr("bg") + "')");
+
+            var geshi = "mp3";
+            var musicURL = $("#musicURL").val();
+            var indexNUM = musicURL.indexOf('.');
+            $("#jpId").jPlayer({
+                ready: function (event) {
+                    $(this).jPlayer("setMedia", {
+                        mp3: musicURL,
+                        wav: musicURL
+                    }).jPlayer("play");
+                },
+                ended: function () { // The $.jPlayer.event.ended event
+                    $(this).jPlayer("play"); // Repeat the media  结束后，重播
+                }, timeupdate: function (event) {
+                    $(".jp-play-bar").css("width", parseInt(event.jPlayer.status.currentPercentAbsolute, 10) + "%");
+                },
+                swfPath: "/voice",
+                supplied: geshi, //这里放两个的时候，火狐不支持。所以看自己放的音乐而改变了
+                wmode: "window",
+                smoothPlayBar: true,
+                keyEnabled: true
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <form id="form1">
+    <span id="song">Song</span>
+    <div class="bg_player" bg='/voice/song/song.jpg?k=051261f9-6872-453c-af22-8ccf5acc9526'></div>
+    <div class="bg_content">
+        <div id="lrc_content">
+            <p>一整个中午，睡不着了。。<br/></p><p><br/></p><p></p>
+        </div>
+    </div>
+    <div id="sleep" style=" display:none;">
+        <input type="hidden" ID="musicURL" value='/voice/song/song.mp3?k=4b62220b-3d97-4c67-97e5-4d9e756e178d' />
+        <div id="jpId">
+        </div>
+    </div>
+    </form>
+</body>
+</html>
