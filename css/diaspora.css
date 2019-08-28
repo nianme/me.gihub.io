@@ -87,7 +87,8 @@ body.loading:before {
 body.loading #container,
 body.loading #single,
 body.loading .nav,
-body.loading #footer {
+body.loading #footer,
+body.loading .container {
   opacity: 0;
 }
 
