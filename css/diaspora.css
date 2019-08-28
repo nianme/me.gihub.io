@@ -49,6 +49,7 @@ body:before {
   -webkit-animation: loading 2s ease-out forwards infinite;
   -moz-animation: loading 2s ease-out forwards infinite;
   display: none;
+  z-index: 999;
 }
 
 body.loading:before {
@@ -85,7 +86,8 @@ body.loading:before {
 
 body.loading #container,
 body.loading #single,
-body.loading .nav {
+body.loading .nav,
+body.loading #footer {
   opacity: 0;
 }
 
