@@ -168,8 +168,8 @@ audio {
   background-position: center center;
   -webkit-mask-box-image: url("/img/logo.png");
   background-color: white;
-  width: 117px;
-  height: 57px;
+  width: 111px;
+  height: 50px;
   mask-image: url("/img/logo.png");
   mask-size: contain;
   transition: background-color 0.5s ease-in-out;
