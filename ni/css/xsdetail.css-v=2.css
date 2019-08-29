@@ -1,0 +1,80 @@
+#left_block
+{
+    height:500px;
+    width: 130px;
+    float:left;
+}
+#left_block h2 {
+    margin: 0 auto;
+    padding-bottom: 16px;
+    font-size: 16px;
+    line-height: 1em;
+    font-family: microsoft yahei;
+    font-weight: normal;
+    border-bottom: 1px dashed #ddd;
+}
+#left_block ul
+{
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#left_block ul li
+{
+    list-style:none;
+}
+#left_block li a:hover{
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in;
+    border-bottom: 1px solid #504E4E;
+}
+#left_block li a {
+    display: block;
+    text-indent: 9px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #0C0C0C;
+    border-bottom: 1px dashed #ddd;
+}
+#right_block
+{
+    width: 600px;
+    float: right;
+    font-family: poppin;
+}
+#right_block .list_Title{font-weight: normal;font-size: 24px;line-height: 25px;}
+#right_block .list_Title a
+{
+    color:Black;
+}
+#right_block .list_Content
+{
+    margin-top: 35px;
+    line-height: 1.8em;
+    font-size: 16px;
+}
+#right_block img
+{
+    max-width:600px;
+}
+#right_block .list_info
+{
+    margin-top: 16px;
+    font-size: 12px;
+    color: #6f6d6d;
+}
+#right_block .list_info a{
+    color:black;
+}
+#right_block .list_info a:hover{
+    color:#FF5722;
+}
+.paginator a[disabled='disabled']{
+    color:gray;
+}
+.paginator { font: 11px Arial, Helvetica, sans-serif;padding: 10px 20px 10px 10px; margin: 0px;background-color: floralwhite;}
+.paginator a {   text-decoration: none;   font-weight:normal;}
+.paginator a:visited {padding: 1px 6px;   text-decoration: none;}
+.paginator .cpb {padding: 1px 6px;font-weight: bold; border:none;color: #2F2C2C;}
+.paginator a:hover {border-color:#AC454A;text-decoration: none;}
