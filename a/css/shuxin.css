@@ -110,8 +110,8 @@ a.shuxin_item:hover {
 
 .shuxin_title {
     font-size: 24px;
-    /* margin-bottom: 26px; */
-    margin: 40px auto;
+    margin-bottom: 26px;
+    text-align: center;
 }
 
 .shuxin_title .cn {
