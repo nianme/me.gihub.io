@@ -564,32 +564,7 @@ a.logo:hover {
 	background-position: -8px -72px;
 }
 
-.rtool_menu {
-	position: fixed;
-	right: 10px;
-	bottom: 100px;
-}
 
-.rtool_menu a.rsns {
-	padding-top: 10px;
-}
-
-.rtool_menu a {
-	display: block;
-	width: 40px;
-	height: 38px;
-	border: solid 1px #efefef;
-	margin-top: -1px;
-	color: #8c8785;
-	font-size: 18px;
-	text-align: center;
-	background: #fff;
-	position: relative;
-}
-
-.rtool_menu a i {
-	padding-top: 10px;
-}
 
 #one_gotop {
 	display: none;
