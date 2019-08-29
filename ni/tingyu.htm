@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	听雨 / 后阁楼
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="js/jquery-1.7.2.min.js-v=10.js" tppabs="http://www.hougelou.com/js/jquery-1.7.2.min.js?v=10" type="text/javascript"></script>
+    <script type="text/javascript" src="js/Tool/jquery.jplayer.min.js" tppabs="http://www.hougelou.com/js/Tool/jquery.jplayer.min.js"></script>
+    <script src="js/Tool/rainyday.js" tppabs="http://www.hougelou.com/js/Tool/rainyday.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var geshi = "mp3";
+        var musicURL = "";
+        $(function () {
+            musicURL = $("#musicURL").val();
+            var indexNUM = musicURL.indexOf('.');
+            $("#jpId").jPlayer({
+                ready: function (event) {
+                    $(this).jPlayer("setMedia", {
+                        mp3: musicURL,
+                        wav: musicURL
+                    }).jPlayer("play");
+                },
+                ended: function () { // The $.jPlayer.event.ended event
+                    $(this).jPlayer("play"); // Repeat the media  结束后，重播
+                }, timeupdate: function (event) {
+                    $(".jp-play-bar").css("width", parseInt(event.jPlayer.status.currentPercentAbsolute, 10) + "%");
+                },
+                swfPath: "/music",
+                supplied: geshi, //这里放两个的时候，火狐不支持。所以看自己放的音乐而改变了
+                wmode: "window",
+                smoothPlayBar: true,
+                keyEnabled: true
+            });
+
+        });
+
+        function demo() {
+            var engine = new RainyDay('canvas', 'demo2', window.innerWidth, window.innerHeight, 5, 0.5); //最后一个参数为模糊值
+            engine.gravity = engine.GRAVITY_NON_LINEAR;
+            engine.trail = engine.TRAIL_DROPS;
+            engine.VARIABLE_GRAVITY_ANGLE = Math.PI / 8;
+            engine.rain([
+						engine.preset(0, 2, 0.5),
+						engine.preset(4, 4, 1)
+					], 50);
+        }
+    </script>
+</head>
+<body onload="demo()" style="overflow: hidden;">
+    <form id="form1">
+    <img id="demo2"  src="voice/tingshuobg.jpg" tppabs="http://www.hougelou.com/voice/tingshuobg.jpg"/>
+    <div id="cholder">
+			<canvas id="canvas" width="1920" height="955" style="width: 1920px; height: 955px; position: fixed;top: 0px;left: 0px;"></canvas>
+		<canvas width="1920" height="955" style="position: fixed; top: 0px; left: 0px; z-index: 100; opacity: 1;"></canvas></div>
+    <div id="sleep" style=" display:none;">
+        <input type="hidden" ID="musicURL" value="/voice/hoho.mp3" />
+        <div id="jpId">
+        </div>
+    </div>
+    </form>
+</body>
+</html>

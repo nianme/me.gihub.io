@@ -1,0 +1,167 @@
+.xiaoqin_reg_logo
+{
+    display: block;
+    width: 110px;
+    height: 400px;
+    background: url('../images/logosprite.png-v=1.png')/*tpa=http://www.hougelou.com/images/logosprite.png?v=1*/ no-repeat;
+    background-position: -242px 4px;
+    color: black;
+    margin: 0px auto;
+}
+#contentLeft
+{
+    width: 30%;
+    height: 960px;
+    float: left;
+    font-size: 30px;
+    line-height: 1em;
+    font-family: sans-serif,caecilia, times;
+    text-align: right;
+    padding-right: 45px;
+    background-color: #f1e9b3;
+    display: block;
+}
+#contentRight {
+    float: left;
+    padding-left: 50px;
+    padding-top: 22px;
+    width: 60%;
+}
+#WaitingContent
+{
+    width: 300px;
+}
+#WaitingContent .TimeTitle
+{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+p.inputs
+{
+    position: relative;
+    margin: 3px 0;
+}
+.tips
+{
+    position: absolute;
+    left: 11px;
+    top: 0;
+    line-height: 35px;
+    height: 35px;
+    color: #a6a6a6;
+    cursor: text;
+    font-size: 14px;
+}
+.ipass
+{
+    cursor: pointer;
+    position: absolute;
+    left: 268px;
+    top: 16px;
+}
+#contentRight .input {
+    width: 260px;
+    border: #EEEEEE 1px solid;
+    border-radius: 0px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #333;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.codeP .error
+{
+        padding-top: 12px;
+    display: inline-block;
+}
+#registerDiv label.success
+{
+    background-image: none;
+}
+#btnLogin
+{
+    width: 266px;
+}
+#registerDiv .label
+{
+    color: #0C0C0C;
+    display: block;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    position: relative;
+    border: #ccc 1px solid;
+    float: left;
+    position: relative;
+}
+#registerDiv .HeadTitle
+{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.auto-tip
+        {
+            margin:0px;
+            padding:0px;
+                margin-top: -1px;
+                margin-left: -90px;
+        }
+        .auto-tip li {
+    list-style: none;
+    padding: 4px 14px;
+    cursor:pointer;
+}
+.auto-tip li:hover,.hoverBg {
+    background-color: #ff8a65;
+    color:White;
+}
+     .auto-tip li em
+     {
+         font-style: normal;
+     }
+     .hidden
+     {
+         display:none;
+     }
+.login_SinaWeiBo {
+    display: block;
+    float: left;
+    color: #ff5722;
+    font-size: 20px;
+}
+.login_QQ {
+    display: block;
+    float: left;
+    margin-left: 16px;
+    color: #ff5722;
+    font-size: 16px;
+    padding-top: 2px;
+}
+.codeP .label
+{
+    width:152px;
+}
+#RememberMe {
+    cursor: pointer;
+    float:left;color:grey;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#RememberMei
+{
+    margin-right: 5px;
+}
+.findpass
+{
+    float:right;color: grey
+}
+.findpass:hover
+{
+    color:#FF9800;
+}
+.passDiv label.error {
+    margin-left: 12px;
+}
