@@ -43,6 +43,7 @@
 .user_R {
     float: left;
     /* margin-left: 14px; */
+    margin: 0 auto;
     color: #9E9E9E;
 }
 
